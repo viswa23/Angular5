@@ -1,0 +1,32 @@
+<div class="container padding-0 box" >
+  
+  <div align="center">
+          <div class="col-md-12 padding-0">
+              <div class="col-md-6 padding-top-left text-left">
+                 <p *ngIf="msgProp.status=='ERROR'" class="text-left fa fa-exclamation-circle icon-font-size red-color"></p>
+                 <span *ngIf="msgProp.status=='OK'" class="text-left fa fa-check-circle icon-font-size"></span><span class="red-color">
+                 {{msgProp.status}}</span>
+                
+              </div>
+              <div class="col-md-6 text-right padding-top-right">
+                    <span  class=" fa fa-ellipsis-h solid icon-font-size dark-grey-color"></span>
+              </div>
+          </div>
+          <div class="col-md-12 bottom-border padding-top-left">
+              <span class="dark-grey-color font-size-25" ><b>{{msgProp.name}}</b></span><br>
+              <span class="light-grey-color">{{msgProp.desc}}</span><br>
+              <span class="light-grey-color font-size-12">{{msgProp.path}}</span><br><br>
+          </div>
+          <div class="col-md-12 padding-0">
+            <div class="col-md-6 padding-top-left padding-bottom-22">
+               <p class="text-left light-grey-color font-size-16">VMs</p>
+               <p class="text-left font-size-16">{{msgProp.numVMS}}</p>
+            </div>
+            <div class="col-md-6  left-border padding-top-left  padding-bottom-22">
+                    <p class="text-left font-size-16 red-color">ERRORs</p>
+                    <p class="text-left red-color font-size-16">{{msgProp.numError}}</p>
+            </div>
+        </div>
+  </div>
+
+</div>
